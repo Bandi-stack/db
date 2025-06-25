@@ -18,7 +18,7 @@ h3 {
 }
 
 .navbar-brand img {
-    height: 50px;
+    width: 15%;
     border-radius: 8px;
 }
 
@@ -315,26 +315,82 @@ h3 {
     }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 576px) {
+    body {
+        font-size: 14px;
+        padding: 0;
+    }
 
-    .list-sec,
-    .top-products,
-    .testimonials,
-    .youtube-links {
-        flex-direction: column;
-        align-items: center;
+    .navbar-brand img {
+        width: 40%;
+    }
+
+    .hero {
+        padding: 2rem 1rem;
+        height: auto;
+    }
+
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 0.95rem;
+    }
+
+    .shop-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .list-sec {
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+
+    .lists img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .lists p {
+        font-size: 1.2rem;
     }
 
     .card {
-        width: 90%;
+        width: 100%;
     }
 
-    .navbar-nav {
-        text-align: center;
+    .testimonials {
+        flex-direction: column;
+        padding: 2rem 1rem;
     }
 
     .testimonial {
-        margin: 2rem 1rem;
+        padding: 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .testimonial::before {
+        font-size: 3rem;
+        left: -20px;
+        top: -10px;
+    }
+
+    .youtube-links {
+        padding: 2rem 1rem;
+    }
+
+    .video-container iframe {
+        width: 100%;
+        height: 200px;
+    }
+
+    .footer {
+        padding: 2rem 1rem;
+    }
+
+    .footer-section {
+        min-width: 100%;
     }
 }
