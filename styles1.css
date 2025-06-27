@@ -2,6 +2,289 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.notification-banner {
+    width: 100%;
+    background-color: #ffe9d6;
+    color: #7a3900;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 1rem;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    border-bottom: 2px solid #e3b17d;
+}
+
+.notification-banner p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 15s linear infinite;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.navbar {
+    background-color: #f8e1d6 !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+    width: 15%;
+    border-radius: 8px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 600;
+    color: #8b3a3a;
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #c0392b;
+}
+
+/* Container for the cards */
+.card {
+    width: 18rem;
+    margin: 1rem auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+    overflow: hidden;
+}
+
+/* Hover effect to lift card */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Image styling */
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+/* Card body spacing */
+.card-body {
+    padding: 1rem 1.5rem;
+}
+
+/* Card title styling */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+/* Card text styling */
+.card-text {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Labels */
+.form-label {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Inputs and selects full width */
+.form-select,
+.form-control {
+    border-radius: 8px;
+    border: 1.5px solid #ccc;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.95rem;
+}
+
+/* Add to Cart button */
+.btn-primary {
+    background-color: #2c7a0d;
+    border: none;
+    border-radius: 12px;
+    padding: 0.6rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1e5307;
+    box-shadow: 0 4px 10px rgba(30, 83, 7, 0.6);
+    cursor: pointer;
+}
+
+/* Responsive: center cards and add spacing on smaller screens */
+@media (min-width: 768px) {
+    .card {
+        margin: 1rem;
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #6e1414;
+    color: #fff;
+    padding: 3rem 1rem;
+    font-size: 0.95rem;
+    margin-top: 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 2rem;
+}
+
+.footer-section h5 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #ffe6e6;
+}
+
+.footer-section a {
+    color: #fdd;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #ffd4a3;
+}
+
+.footer-section i {
+    margin-right: 8px;
+    color: #ffbdbd;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin: 1rem 0;
+    }
+}
+
+.cart-item {
+    display: flex;
+    gap: 15px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.remove-btn {
+    font-size: 14px;
+}
+
+@media (max-width: 576px) {
+    .navbar-brand img {
+        width: 40%;
+    }
+
+    .card {
+        width: 95%;
+        margin: 1rem auto;
+    }
+
+    .card-img-top {
+        height: 150px;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.85rem;
+    }
+
+    .form-label {
+        font-size: 0.9rem;
+    }
+
+    .form-select,
+    .form-control {
+        font-size: 0.9rem;
+        padding: 0.35rem 0.5rem;
+    }
+
+    .btn-primary {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .footer {
+        padding: 2rem 1rem;
+    }
+
+    .footer-section {
+        min-width: 100%;
+        margin: 1rem 0;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .cart-item img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .cart-item-details {
+        width: 100%;
+    }
+
+    .remove-btn {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
 }
 .notification-banner {
   width: 100%;
