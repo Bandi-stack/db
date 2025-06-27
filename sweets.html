@@ -14,6 +14,9 @@
 </head>
 
 <body>
+    <div class="notification-banner">
+        <p>📢 Costs are negotiable based on location and quantity ordered. Contact us for the best deals!</p>
+    </div>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html"><img src="logo.jpg" alt=""></a>
@@ -23,7 +26,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page" href="index.html">Home</a>
                     </li>
@@ -41,6 +44,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="cart.html">Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://g.page/r/CdC5xiagUfe6EAI/review">Add Review</a>
                     </li>
                 </ul>
 
@@ -78,12 +84,11 @@
             </div>
         </div>
 
-
         <div class="card" style="width: 18rem;">
-            <img src="ravva-laddu.jpg" class="card-img-top" alt="Spicy Mango Pickle" />
+            <img src="images/ravva-laddu.jpg" class="card-img-top" alt="Spicy Mango Pickle" />
             <div class="card-body">
                 <h5 class="card-title">MILLETS LADDU</h5>
-                <p class="card-text">A healthy and delicious sweet made from a rich blend of Millets, Cashews and jaggery. Packed
+                <p class="card-text">A healthy and delicious sweet made from a rich blend of Millets and jaggery. Packed
                     with energy and nutrition, these laddus are perfect for
                     festive treats or
                     guilt-free snacking.</p>
@@ -104,6 +109,7 @@
                 </button>
             </div>
         </div>
+
         <div class="card" style="width: 18rem;">
             <img src="sunniundalu.jpeg" class="card-img-top" alt="Spicy Mango Pickle" />
             <div class="card-body">
@@ -183,19 +189,17 @@
         </div>
 
 
+
     </div>
 
     <script>
-        // Prices per product per weight
         const prices = {
             "DRY FRUITS LADDU": { "1kg": 1400, "1/2kg": 700 },
-            "MILLETS LADDU": { "1kg": 500, "1/2kg": 300 },
             "SUNNIUNDALU": { "1kg": 800, "1/2kg": 400 },
             "SALIVIDI": { "1kg": 300, "1/2kg": 150, },
             "BUFFALO GHEE": { "1kg": 1000, "1/2kg": 500, "1/4kg": 300 },
+            "MILLETS LADDU": { "1kg": 500, "1/2kg": 300 }
         };
-
-        // Update price inside a card element
         function updatePrice(card) {
             const productName = card.querySelector('.card-title').textContent.trim();
             const weightSelect = card.querySelector('.weight-select');
@@ -209,21 +213,13 @@
 
             priceDisplay.textContent = totalPrice.toFixed(2);
         }
-
-        // Setup event listeners for price updates and add-to-cart buttons
         document.querySelectorAll('.card').forEach(card => {
             const weightSelect = card.querySelector('.weight-select');
             const qtyInput = card.querySelector('.qty-input');
             const addToCartBtn = card.querySelector('.add-to-cart-btn');
-
-            // Initialize price display
             updatePrice(card);
-
-            // Update price when weight or quantity changes
             weightSelect.addEventListener('change', () => updatePrice(card));
             qtyInput.addEventListener('input', () => updatePrice(card));
-
-            // Add to cart click
             addToCartBtn.addEventListener('click', () => {
                 const productName = card.querySelector('.card-title').textContent.trim();
                 const weight = weightSelect.value;
@@ -266,14 +262,16 @@
         <a href="vegPickles.html"><i class="bi bi-dot"></i> Veg</a><br>
         <a href="nonVegPickles.html"><i class="bi bi-dot"></i> Non-Veg</a><br>
         <a href="masalas.html"><i class="bi bi-dot"></i> Masala & Powders</a><br>
+        <a href="sweets.html"><i class="bi bi-dot"></i> Sweets & more</a><br>
         <a href="cart.html"><i class="bi bi-cart4"></i> Cart</a>
     </div>
 
     <div class="footer-section social-media">
         <h5><i class="bi bi-share-fill"></i> Follow Us</h5>
-        <a href="#"><i class="bi bi-youtube"></i> YouTube</a><br>
-        <a href="#"><i class="bi bi-instagram"></i> Instagram</a><br>
-        <a href="#"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+        <a href="https://youtube.com/@bhavyanagalla8187?feature=shared"><i class="bi bi-youtube"></i> YouTube</a><br>
+        <a href="https://www.instagram.com/dbruchulu?igsh=ejVjdHY1MHJ4dXVu&utm_source=qr"><i
+                class="bi bi-instagram"></i> Instagram</a><br>
+        <a href="https://www.facebook.com/share/16RpdNZkXG/?mibextid=wwXIfr"><i class="bi bi-facebook"></i> facebook</a>
     </div>
 </footer>
 
